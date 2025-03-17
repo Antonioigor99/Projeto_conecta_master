@@ -1,0 +1,51 @@
+@media screen and (max-width: 768px) {
+    .conversa__negocio{
+        margin: 3em auto !important;
+    }   
+    .carroseul__slide-container{
+        width: 100% !important;
+        margin: 5em auto !important;
+        text-align: center;
+        position: static ;
+        flex-direction: column ;
+    }
+    .carousel-item-title{
+        font-size: 45px !important ;
+    }
+    .carousel-item-text{
+        width: 100% !important;
+        margin: 0 auto;
+        text-align: center ;
+        font-size: 18px !important;
+    }
+    .banner__button-container{
+        position: static;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+    .card-deck{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .projects__single{
+        display: flex;
+        flex-direction: column;
+    }
+    .about__services-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5em;
+    }
+    .services__checklist{
+        width: 100%;
+    }
+    .feedback__description-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .feedback__description,.feedback__img{
+        width: 100% !important;
+    }
+}

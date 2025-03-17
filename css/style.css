@@ -1,3 +1,5 @@
+@import url(animated.css);
+@import url(media-querys.css);
 :root{
     --font-principal:'Poppins';
     --backgrond-principal:#000;
@@ -30,6 +32,9 @@ html,body{
     z-index: 999;
     height: 150px;
 }
+.nav-pills{
+    display: none;
+}
 .nav-item .active{
     background: var(--button-linear-gradient);
 }
@@ -43,19 +48,25 @@ html,body{
     color: var(--border-hover);
 }
 /* Header */
+.banner__with-header{
+    max-width: 1280px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
 .banner__container{
     width: 100%;
-    height: auto;
+    min-height: 100vh;
     background-image: url(/img/Banner-15.png);
     background-position: 80% 50%;
     background-repeat: no-repeat;
     color:var(--text-color);
+    overflow: hidden;
 }
 .banner__opacity__container{
     background:var(--background-opacity);
     width: 100%;
-    height: 200%;
-    padding-bottom: 7%;
+    min-height: inherit;
 }
 .banner__title{
     width: 100%;
@@ -69,32 +80,30 @@ html,body{
     padding: 0.5em;
     text-align: center;
     font-size: 16px;
-    margin: 2em 20%;
+    margin: 3em 20%;
+
 }
 .carroseul__slide-container{
-    width: 60%;
+    width: 100%;
     margin: 1em;
-    left: 10em;
 }
 .carousel-item-title{
-    font-size:45px;
+    font-size:72px;
     font-weight: 700;
     padding-bottom: 0.5em;
 }
 .carousel-item-text{
-    font-size: 16px;
+    font-size: 28px;
     font-weight: 400;
     padding-left: 2%;
     max-width: 80%;
 }
 .banner__button-container{
-    width: 100%;
-    position: relative;
-    top: 35%;
-    display: flex;
+    width: 80%;
     align-items: center;
-    justify-content: center;
-    padding-right: 10%;
+    justify-content: flex-end;
+    margin: 10em auto;
+
 }
 .button-container__link{
     background:var(--button-linear-gradient) ;
@@ -115,22 +124,25 @@ html,body{
     margin-top: 1em;
     color: var(--color-border);
 }
+/* projects */
 /* Services */
 .services__container{
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
-
 }
 .services__icon{
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-color);
+    padding: 30px;
 }
 .services__icon-text{
+    text-align: center;
+    max-width: 300px;
     font-size: 16px;
     font-weight: 300;
-    padding: 10px;
+    padding: 10px 20px;
     border: 1px solid var(--color-border);
     background: var(--background-button-opacity);
     border-radius: 25px;
@@ -138,6 +150,7 @@ html,body{
 .services__description-container{
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 5%;
 }
 .service__title,.service__text{
     color: var(--text-color);
@@ -156,6 +169,7 @@ html,body{
 .services__wraper-container{
     max-width: 1280px;
     margin: 20px auto;
+    padding: 0 3%;
 }
 .card-deck{
     padding: 2%;
@@ -166,14 +180,16 @@ html,body{
     padding: 2em;
 }
 .card-icon{
+    width: 1.3em;
     font-size: 75px;
+    text-align: center;
+    animation: icon-rotate 5s linear infinite;
 }
 .card-icon, .card-text-footer a{
     color: var(--text-secondary);
     text-decoration: none;
     font-weight: 500;
 }
-
 .card-text-footer a{
     font-size: 16px;
 }
@@ -192,19 +208,182 @@ html,body{
 /* Services */
 /* Destaque-projects */
 .projects__container{
-    width: 1280px;
+    max-width: 1280px;
     margin: 0 auto;
     text-align: center;
     color: var(--text-color);
+    padding: 20px 2%;
 }
+
 .projects__title{
     font-size: 45px;
     font-weight: 700;
 }
-.call__to-action-container{
-    width: 1280px;
+.about__services-container{
+    max-width: 1280px;
     margin: 0 auto;
+    padding: 20px;
 }
-.card-call-to-me{
-border: 2px sold red;
+.about__services-img{
+    width: 400px;
+    height: 600px;
+    border-radius: 40px;
+    background-image: url(../img/background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 60%;
+}
+.services__description{
+    max-width: 600px;
+    color: var(--text-color);
+    padding: 0 2%;
+}
+.services__checklist-container{
+    color: white;
+    max-width: 300px;
+}
+.services__checklist{
+    border: 2px solid var(--color-border);
+    padding: 10px; 
+    border-radius: 36px;
+    text-align: center;
+    font-size: 18px;
+    background:var(--background-button-opacity);
+    margin-bottom: 1em;
+}
+.services__title{
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+.services__text{
+    font-size: 16px;
+}
+.fa-circle-check{
+    color: var(--color-border);
+}
+.services__list{
+    list-style-type: none;
+}
+.services__item{
+    font-size: 18px;
+}
+
+/* Feedback customer */
+.feedback__customer-container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px;
+    color: var(--text-color);
+}
+.feedback__description{
+    width: 50%;
+    padding: 2%;
+}
+.feedback__img{
+    width: 50%;
+    height: 400px;
+    background-image: url(../img/young-smiling-man-typing-computer-while-browsing-internet-drinking-coffee-bar-1-scaled.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+.feedback-icon{
+    width: 1.3em;
+    font-size: 75px;
+    text-align: center;
+    color: var(--text-secondary);
+}
+.feedback__title{
+    font-size: 45px;
+    text-align: center;
+    padding-bottom: 1em;
+}
+.feedback__text{
+    font-size: 16px;
+    font-weight: 400;
+}
+.feedback__customer{
+    padding-top: 1.3em;
+}
+.customer__title{
+    color: var(--color-border);
+    font-size: 18px;
+    font-weight: 600;
+}
+.customer__text{
+    font-size: 16px;
+    font-weight: 400;
+}
+/* logo animated */
+.logo__animate{
+    width: 100%;
+    height: 120px;
+    gap: 1em;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+}
+.logo-wraper{
+    width: 250px;
+    height: 100px;
+    flex-shrink: 0;
+}
+.animated__img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+/* section final */
+.reuniao__container{
+    max-width: 1280px;
+    margin: 10px auto;
+    padding: 2%;
+
+}
+.reuniao__description{
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--border-hover);
+    border-radius: 30px;
+    padding: 3em;
+    color: var(--text-color);
+    
+}
+.reuniao__title{
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.reuniao__text{
+    max-width: 500px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.reuniao__link{
+    margin-top: 5px;
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.7em 1.5em;
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.reuniao__link:hover{
+    text-decoration: none;
+    color: var(--text-color);
+    border: 2px solid var(--background-button-opacity);
+}
+/* Footer */
+.footer__container{
+    text-align: center;
+    color: var(--text-color);
+    padding: 10px;
+}
+.footer__title1{
+    position: relative;
+    top: 15px;
 }
